@@ -1,6 +1,20 @@
-# Getting Started with Create React App
+# Magic-8-Ball
+
+Magic 8 Ball app created for the Hack Western React Workshop
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Install the node modules with
+
+### `npm i`
+
+Install the reshake library and styled-components
+
+### `npm i --save reshake`
+
+### `npm i styled-components`
 
 ## Available Scripts
 
