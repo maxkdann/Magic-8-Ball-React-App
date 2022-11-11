@@ -10,11 +10,6 @@ Install the node modules with
 
 ### `npm i`
 
-Install the reshake library and styled-components
-
-### `npm i --save reshake`
-
-### `npm i styled-components`
 
 ## Available Scripts
 
