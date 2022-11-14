@@ -8,7 +8,7 @@ const Ball = () => {
 
   //API is expecting this
   let params = encodeURIComponent("Can I ask you a question");
-  const uri = `https://8ball.delegator.com/magic/JSON/${params}`;
+  const url = `https://8ball.delegator.com/magic/JSON/${params}`;
 
   // step 3: animate shake and get answer
   const clickHandler = async () => {
@@ -17,10 +17,10 @@ const Ball = () => {
       setAnimationActive(false);
     }, 500);
     // step 2: call Magic 8 Ball API
-    fetch(uri)
+    fetch(url)
       .then((response) => response.json())
-      .then((json) => {
-        setAnswer(json.magic.answer);
+      .then((data) => {
+        setAnswer(data.magic.answer);
       })
       .catch((err) => {
         console.log(err);
@@ -29,7 +29,6 @@ const Ball = () => {
 
   return (
     <div className="main">
-      <div className="shadow"></div>
       <ShakeHorizontal active={animationActive}>
         {/* Step 1 */}
         <div className="ball" onClick={clickHandler}>
@@ -39,6 +38,7 @@ const Ball = () => {
           <div className="answer">{answer}</div>
         </div>
       </ShakeHorizontal>
+      <div className="shadow"></div>
     </div>
   );
 };
