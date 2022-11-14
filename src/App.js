@@ -1,10 +1,10 @@
-import BallFinal from "./components/BallFinal";
+import Ball from "./components/Ball";
 import "./styles/App.css";
 
 function App() {
   return (
     <div className="App">
-      <BallFinal />
+      <Ball />
     </div>
   );
 }
