@@ -1,15 +1,16 @@
-const clickHandler = async () => {
+const clickHandler = () => {
   setAnimationActive(true);
+  setAnswer("");
   setTimeout(() => {
     setAnimationActive(false);
   }, 700);
-  // call Magic 8 Ball API
-  fetch(uri)
+  // step 2: call Magic 8 Ball API
+  fetch(url)
     .then((response) => response.json())
-    .then((json) => {
-      setAnswer(json.magic.answer);
+    .then((data) => {
+      setAnswer(data.magic.answer);
     })
     .catch((err) => {
-      console.log(err);
+      console.error(err);
     });
 };
