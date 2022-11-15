@@ -13,9 +13,10 @@ const Ball = () => {
   // step 3: animate shake and get answer
   const clickHandler = async () => {
     setAnimationActive(true);
+    setAnswer("");
     setTimeout(() => {
       setAnimationActive(false);
-    }, 500);
+    }, 700);
     // step 2: call Magic 8 Ball API
     fetch(url)
       .then((response) => response.json())
@@ -23,7 +24,7 @@ const Ball = () => {
         setAnswer(data.magic.answer);
       })
       .catch((err) => {
-        console.log(err);
+        console.error(err);
       });
   };
 
