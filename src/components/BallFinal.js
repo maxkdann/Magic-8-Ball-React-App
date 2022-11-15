@@ -11,7 +11,7 @@ const Ball = () => {
   const url = `https://8ball.delegator.com/magic/JSON/${params}`;
 
   // step 3: animate shake and get answer
-  const clickHandler = async () => {
+  const clickHandler = () => {
     setAnimationActive(true);
     setAnswer("");
     setTimeout(() => {
@@ -31,7 +31,7 @@ const Ball = () => {
   return (
     <div className="main">
       <ShakeHorizontal active={animationActive}>
-        {/* Step 1 */}
+        {/* Step 1 show ball on screen*/}
         <div className="ball" onClick={clickHandler}>
           <div className="light"></div>
           <div className="center"></div>
