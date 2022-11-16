@@ -10,6 +10,8 @@ Install the node modules with
 
 ### `npm i`
 
+## Running the Final App
+Replace all instances of Ball with BallFinal inside the App.js file
 
 ## Available Scripts
 
